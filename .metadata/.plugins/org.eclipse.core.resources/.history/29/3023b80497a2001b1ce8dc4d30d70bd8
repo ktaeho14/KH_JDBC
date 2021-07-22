@@ -1,0 +1,33 @@
+package com.test02.dao;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.test02.dto.MyTestDto;
+
+public class MyTestDao {
+	
+	//select
+	public List<MyTestDto> getAll(Connection con) {
+		
+		Statement stmt = null;
+		ResultSet rs = null;
+		
+		List<MyTestDto> list = new ArrayList<MyTestDto>();
+		String sql = "SELECT * FROM MYTEST";
+		
+		//실행 및 리턴
+		
+		stmt = con.createStatement();
+		
+		
+		
+		
+		
+		
+		return null;
+	}
+}

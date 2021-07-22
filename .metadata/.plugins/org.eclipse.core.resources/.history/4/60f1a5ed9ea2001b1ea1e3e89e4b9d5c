@@ -1,0 +1,19 @@
+package com.pr.dao;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.pr.dto.dto;
+
+public class dao {
+		
+	public list<dto> selectAll(Connection con){
+			String stmt = null;
+			String rs = null;
+			
+			List<dto> list = new ArrayList<dto>();
+			
+		return null;
+	}
+}

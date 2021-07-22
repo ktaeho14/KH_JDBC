@@ -1,0 +1,51 @@
+package com.product.model.biz;
+
+import static common.JDBCTemplate.getConnection;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.List;
+
+import javax.print.attribute.standard.PDLOverrideSupported;
+
+import com.product.model.dao.ProductDao;
+import com.product.model.dao.ProductDaoImpl;
+import com.product.model.dto.Product;
+
+import static common.JDBCTemplate.*;
+public class ProductBizImpl implements ProductBiz {
+
+	@Override
+	public List<Product> selectAll() {
+		Connection con = getConnection();
+		ProductDao pd = new ProductDaoImpl();
+		
+		List<Product> list = pd.selectAll(con);
+		
+		close(con);
+		return list;
+	}
+
+	@Override
+	public Product selectOne(String productId) {
+		Connection con = getConnection();
+		
+		
+		return null;
+	}
+
+	@Override
+	public int insert(Product p) {
+		return 0;
+	}
+
+	@Override
+	public int update(Product p) {
+		return 0;
+	}
+
+	@Override
+	public int delete(String productId) {
+		return 0;
+	}
+}

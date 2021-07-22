@@ -1,0 +1,111 @@
+package com.view;
+
+import java.util.List;
+import java.util.Scanner;
+
+import com.biz.MemberBizImpl;
+import com.dto.Member;
+
+public class MemberView {
+	static Scanner sc = new Scanner(System.in);
+	
+	
+	public static int getMenu() {
+		int select = 0;
+		System.out.println("***********");
+		System.out.println("1.전체출력");
+		System.out.println("2.선택출력");
+		System.out.println("3.추가");
+		System.out.println("4.수정");
+		System.out.println("5.삭제");
+		System.out.println("6.종료");
+		
+		System.out.println("메뉴 선택: ");
+		select = sc.nextInt();
+		return select;
+	}
+	
+	
+	public static void main(String[] args) {
+		int select=0;
+		MemberBizImpl memberbiz = new MemberBizImpl(); 
+		
+		
+		while(select != 6) {
+		select = getMenu();
+			switch(select) {
+			case 1:
+				//전체 출력
+				List<Member> res = memberbiz.getAll();
+				
+				for(Member m : res) {
+					System.out.println(m);
+				}
+				break;
+			case 2:
+				//선택 출력
+				System.out.println("번호를 선택해주세요: ");
+				int n = sc.nextInt();
+				
+				Member resOne = memberbiz.getOne(n);
+				
+				System.out.println(resOne);
+				
+				break;
+				
+				
+			case 3:
+				//추가
+				System.out.println("==추가할 데이터입력 ==");
+				System.out.print("이름: ");
+				String name = sc.next();
+				System.out.print("나이: ");
+				int age = sc.nextInt();
+				System.out.print("성별[M/F]: ");
+				String gender = sc.next();
+				System.out.print("지역: ");
+				String location = sc.next();
+				System.out.print("직업: ");
+				String job = sc.next();
+				System.out.print("전화번호: ");
+				String tel = sc.next();
+				System.out.print("이메일: ");
+				String email = sc.next();
+				
+				
+				Member insert = new Member(0,name,age,gender,location,job,tel,email);
+				
+				
+			case 4:
+				
+			case 5:
+				
+			case 6:
+				System.out.println("종료되었습니다.");
+				break;
+			}
+			
+			
+			
+			
+			
+			
+		}
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

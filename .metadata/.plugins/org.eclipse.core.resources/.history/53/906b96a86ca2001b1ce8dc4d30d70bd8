@@ -1,0 +1,50 @@
+package com.test01;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.test01.practice;
+public class practicem {
+
+	public static void main(String[] args) {
+		
+		practice ms = new practice();
+		
+		ResultSet rs = null;
+		Statement st = null;
+		Connection con2 = null;
+
+		
+		String sql = "SELECT * FROM EMPLOYEE WHERE DEPT_CODE = 'D6'";
+		
+		//연결
+		con2 = ms.con();
+		
+		try {
+			st = con2.createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		try {
+			rs = st.executeQuery(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		try {
+			while(rs.next()) {
+				System.out.println(rs.getInt(1));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.test02.dao;
+
+import java.sql.Connection;
+import java.util.List;
+
+import com.test02.dto.MyTestDto;
+
+public class MyTestDao {
+	
+	//select
+	public List<MyTestDto> getAll(Connection con) {
+		
+		
+		return null;
+	}
+}

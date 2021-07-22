@@ -1,0 +1,47 @@
+package com.test02.dto;
+
+public class MyTestDto {
+	private int mno;
+	private String mname;
+	private String nickname;
+	
+	public MyTestDto() {}
+	
+	public MyTestDto(int mno, String mname, String nickname) {
+		super();
+		this.mno = mno;
+		this.mname = mname;
+		this.nickname = nickname;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

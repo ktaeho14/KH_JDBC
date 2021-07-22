@@ -1,0 +1,16 @@
+package com.test01;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class JDBCTest04 {
+
+	public static void main(String[] args) {
+		
+		//준비
+		Connection con = null;
+		PreparedStatement pstm = null;
+
+	}
+
+}

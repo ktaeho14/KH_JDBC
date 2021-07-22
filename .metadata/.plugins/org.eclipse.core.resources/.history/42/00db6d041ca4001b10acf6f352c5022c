@@ -1,0 +1,13 @@
+package com.product.model.dto;
+
+public class Product {
+	private String productId;
+	private String p_Name;
+	private int price;
+	private String description;
+	public Product() {
+	
+
+}
+
+

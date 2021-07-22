@@ -1,0 +1,110 @@
+package com.test01;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class practicetemplate {
+	
+	
+	
+	//드라이버 연결
+	public static Connection con() throws SQLException {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		} catch (ClassNotFoundException e) {
+			System.out.println("드라이버 연결실패");
+			e.printStackTrace();
+		}
+				
+		
+		
+		
+		
+		Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","KH","KH");
+		
+		return con;
+	}
+	
+	
+	public static String sql1() {
+		String sql = "SELECT * FROM EMPLOYEE";
+		return sql;
+	}
+	
+	
+	public static Statement st() throws SQLException {
+		Statement st = practicetemplate.con().createStatement();
+		
+		return st;
+	}
+	
+	public static ResultSet rs1() throws SQLException {
+		ResultSet rs = practicetemplate.st().executeQuery(practicetemplate.sql1());
+		
+		
+		return rs;
+	}
+	
+	public void print() {
+		try {
+			practicetemplate.rs1();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		try {
+			while(practicetemplate.rs1().next()) {
+				System.out.println(practicetemplate.rs1().getInt(1));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public static void resultsetclose() {
+		
+		
+		 try {
+			practicetemplate.rs1().close();
+		} catch (SQLException e) {
+			System.out.println("resultset닫힘");
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public static void statementclose() {
+		try {
+			practicetemplate.st().close();
+		} catch (SQLException e) {
+			System.out.println("statement닫힘");
+			e.printStackTrace();
+		}
+	}
+	
+	
+	public static void Connectionclose() {
+		try {
+			practicetemplate.con().close();
+		} catch (SQLException e) {
+			System.out.println("Connection닫힘");
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

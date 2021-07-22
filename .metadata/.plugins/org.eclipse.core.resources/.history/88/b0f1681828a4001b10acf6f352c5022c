@@ -1,0 +1,39 @@
+package com.product.model.biz;
+
+import java.util.List;
+
+import com.product.model.dto.Product;
+
+public class ProductBizImpl implements ProductBiz {
+
+	@Override
+	public List<Product> selectAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Product selectOne(String productId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int insert(Product p) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int update(Product p) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int delete(String productId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

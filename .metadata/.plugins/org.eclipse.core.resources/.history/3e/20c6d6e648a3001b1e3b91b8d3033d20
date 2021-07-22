@@ -1,0 +1,23 @@
+package com.dto;
+
+public class Member {
+	//--번호,이름,나이,성별,지역,직업,전화,이메일
+	private int m_no;
+	private String m_name;
+	private int m_age;
+	private String m_gender;
+	private String m_location;
+	private String m_job;
+	private String m_tel;
+	private String m_email;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

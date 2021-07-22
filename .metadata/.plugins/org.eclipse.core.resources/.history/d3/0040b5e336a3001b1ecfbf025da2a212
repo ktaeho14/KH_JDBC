@@ -1,0 +1,78 @@
+package com.test02.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.test02.dto.MyTestDto;
+
+import static common.JDBCTemplate.*;
+public class MyTestDao {
+	
+	//select
+	public List<MyTestDto> getAll(Connection con) {
+		
+		Statement stmt = null;
+		ResultSet rs = null;
+		
+		List<MyTestDto> list = new ArrayList<MyTestDto>();
+		String sql = "SELECT * FROM MYTEST";
+		
+		//실행 및 리턴
+		
+		try {
+			stmt = con.createStatement();
+			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				MyTestDto tmp = new MyTestDto(rs.getInt(1),rs.getNString(2),rs.getNString(3));
+				
+				list.add(tmp);
+				
+				
+				
+			}
+			
+		} catch (SQLException e) {
+			System.out.println("[error]select 에러");
+			e.printStackTrace();
+		}
+		
+		close(rs);
+		close(stmt);
+		
+		
+		
+		return list;
+	}
+	
+	
+	
+	public int getInsert(Connection con, MyTestDto dto) {
+		//준비
+		PreparedStatement pstm = null;
+		String sql = "INSERT INTO MYTEST(?,?,?)";
+		
+		int res = 0;
+		
+		try {
+			pstm = con.prepareStatement(sql);
+		} catch (SQLException e) {
+			System.out.println("[error]insert 에러");
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+		
+		
+		return 0;
+	}
+	
+}

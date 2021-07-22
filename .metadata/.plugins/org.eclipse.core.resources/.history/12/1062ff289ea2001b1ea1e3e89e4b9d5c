@@ -1,0 +1,7 @@
+package com.pr.dto;
+
+public class dto {
+	private mno;
+	private mname;
+	private mnickname;
+}

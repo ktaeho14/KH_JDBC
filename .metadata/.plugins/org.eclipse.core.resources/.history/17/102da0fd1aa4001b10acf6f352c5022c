@@ -1,0 +1,7 @@
+package com.product.model.dto;
+
+public class Product {
+	private String product_id;
+	private String p_name;
+	priav
+}

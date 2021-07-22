@@ -1,0 +1,29 @@
+package com.test01;
+
+import java.sql.Connection;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class JDBCTest03 {
+
+	public static void main(String[] args) {
+		
+		//준비
+		Connection con = null;
+		Statement stmt = null;
+		
+		//입력
+		Scanner sc = new Scanner(System.in);
+	
+		System.out.println("no: ");
+		int no  = sc.nextInt();
+		System.out.println("name: ");
+		String name = sc.next();
+		System.out.println("nickname: ");
+		String nickName = sc.next();
+		
+		
+		//INSERT INTO MYTEST VALUES(no,'name','nickName')
+	}
+
+}

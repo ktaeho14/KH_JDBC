@@ -1,0 +1,82 @@
+package com.product.model.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.product.model.dto.Product;
+
+import static common.JDBCTemplate.*;
+public class ProductDaoImpl implements ProductDao {
+
+	@Override
+	public List<Product> selectAll(Connection con) {
+		Statement stmt = null;
+		ResultSet rs = null;
+		
+		
+		List<Product> list = new ArrayList<Product>();
+		
+		try {
+			stmt = con.createStatement();
+			rs = stmt.executeQuery(selectAll);
+			while(rs.next()) {
+				Product pd = new Product();
+				pd.setProductId(rs.getString(1));
+				pd.setP_Name(rs.getString(2));
+				pd.setPrice(rs.getInt(3));
+				pd.setDescription(rs.getString(4));
+				
+				list.add(pd);
+			}
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}finally {
+			close(rs);
+			close(stmt);
+		}
+		return list;
+	}
+
+	@Override
+	public Product selectOne(Connection con, String productId) {
+		PreparedStatement pstm = null;
+		ResultSet rs = null;
+		Product p = new Product();
+		try {
+			
+			pstm = con.prepareStatement(selectOne);
+			pstm.setString(1, productId);
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	@Override
+	public int insert(Connection con, Product p) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int update(Connection con, Product p) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int delete(Connection con, String ProductId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

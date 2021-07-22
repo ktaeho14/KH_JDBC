@@ -1,0 +1,54 @@
+package com.product.model.dto;
+
+public class Product {
+	private String productid;
+	private String p_name;
+	private int price;
+	private String description;
+	public Product() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Product(String productid, String p_name, int price, String description) {
+		super();
+		this.productid = productid;
+		this.p_name = p_name;
+		this.price = price;
+		this.description = description;
+	}
+	public String getProductid() {
+		return productid;
+	}
+	public void setProductid(String productid) {
+		this.productid = productid;
+	}
+	public String getP_name() {
+		return p_name;
+	}
+	public void setP_name(String p_name) {
+		this.p_name = p_name;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	@Override
+	public String toString() {
+		return "[" + productid + "," + p_name + "," + price + ","+ description + "]";
+	}
+	
+	
+	
+	
+
+}
+
+

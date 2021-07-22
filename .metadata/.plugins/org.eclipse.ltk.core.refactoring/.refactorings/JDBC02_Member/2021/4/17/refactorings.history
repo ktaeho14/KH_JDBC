@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;JDBCTemplate.java&apos; to &apos;JDBC03_Product/src/common&apos;&#x0D;&#x0A;- Original project: &apos;JDBC02_Member&apos;&#x0D;&#x0A;- Destination element: &apos;JDBC03_Product/src/common&apos;&#x0D;&#x0A;- Original element: &apos;common.JDBCTemplate.java&apos;" description="Copy compilation unit" destination="=JDBC03_Product/src&lt;common" element1="/src&lt;common{JDBCTemplate.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1619169446232" units="1" version="1.0"/>
+</session>

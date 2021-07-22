@@ -1,0 +1,13 @@
+package com.pr.dao;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+
+import com.pr.dto.dto;
+
+public class dao {
+		ArrayList<dto> list = ArrayList<dto>;
+	public list<dto> selectAll(Connection c){
+		
+	}
+}

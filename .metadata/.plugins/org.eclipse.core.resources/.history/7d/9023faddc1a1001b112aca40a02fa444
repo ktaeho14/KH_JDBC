@@ -1,0 +1,27 @@
+package com.test01;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.test01.practice;
+public class practicem {
+
+	public static void main(String[] args) {
+		
+		practice ms = new practice();
+		
+		ResultSet rs = null;
+		Statement st = null;
+		Connection con2 = null;
+
+		
+		String sql = "SELECT * FROM EMPLOYEE WHERE DEPT_CODE = 'D6'";
+		
+		//연결
+		con2 = 
+		
+		
+	}
+
+}

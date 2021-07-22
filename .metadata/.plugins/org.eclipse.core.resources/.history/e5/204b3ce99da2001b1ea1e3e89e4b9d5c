@@ -1,0 +1,46 @@
+package com.pr.view;
+
+import java.util.Scanner;
+
+import com.test02.dao.MyTestDao;
+
+public class view {
+	static Scanner sc = new Scanner(System.in);	
+	public static void main(String[] args) {
+		int no =0;
+		no = sc.nextint();
+		int mno=0;
+		String name = null;
+		String nickName = null;
+		
+		MyTestDao dao = new MyTestDao();
+		
+		do {
+			
+			
+			
+			switch(no) {
+			//전체 출력(selectAll)
+			case 1:
+				
+				
+			//추가(insert)
+			case 2:
+				
+			//수정(update)
+			case 3:
+				
+			//삭제(delete)
+			case 4:
+				
+			//종료
+			case 5:
+				System.out.println("종료");
+			break;
+			}
+			
+		}while(no != 5);
+
+	}
+
+}

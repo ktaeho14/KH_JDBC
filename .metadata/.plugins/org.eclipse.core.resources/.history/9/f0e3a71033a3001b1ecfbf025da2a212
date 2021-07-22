@@ -1,0 +1,44 @@
+package com.pr.dto;
+	
+
+
+	
+public class dto {
+	private int mno;
+	private String mname;
+	private String mnickname;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

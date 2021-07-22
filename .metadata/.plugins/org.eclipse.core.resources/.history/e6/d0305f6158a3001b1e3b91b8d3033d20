@@ -1,0 +1,69 @@
+package com.dao;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.dto.Member;
+
+
+public class MemberDaoImpl implements MemberDao{
+
+	@Override
+	public List<Member> getAll(Connection con) {
+		Statement stmt = null;
+		ResultSet rs = null;
+		
+		
+		List<Member> list = new ArrayList<Member>();
+		//실행
+		try {
+			stmt = con.createStatement();
+			rs=stmt.executeQuery(selectAllSql);
+			//결과처리
+			while(rs.next()) {
+				Member tmp = new Member();
+				tmp.setM_no(rs.getInt(1));
+				tmp.setM_name(rs.getString("M_NAME"));
+				tmp.setM_AGE(rs.getInt(3));
+				tmp.
+			}
+			
+		} catch (SQLException e) {			
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		return null;
+	}
+
+	@Override
+	public Member getOne(Connection con, int n) {
+		
+		return null;
+	}
+
+	@Override
+	public int insert(Connection con, Member m) {
+		
+		return 0;
+	}
+
+	@Override
+	public int delete(Connection con, int n) {
+		
+		return 0;
+	}
+
+	@Override
+	public int update(Connection con, Member m) {
+		
+		return 0;
+	}
+
+}

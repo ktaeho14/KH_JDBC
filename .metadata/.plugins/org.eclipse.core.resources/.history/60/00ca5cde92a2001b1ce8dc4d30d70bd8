@@ -1,0 +1,36 @@
+package com.test02.view;
+
+import java.util.Scanner;
+
+import com.test02.dao.MyTestDao;
+
+public class MyTestView {
+	static Scanner sc = new Scanner(System.in);
+	
+	public static void maim(String[] args) {
+		int no =0;
+		
+		int mno=0;
+		String name = null;
+		String nickName = null;
+		
+		MyTestDao dao = new MyTestDao();
+		
+		do {
+			
+			
+			
+		}while(no != 5);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}

@@ -1,0 +1,71 @@
+package com.view;
+
+import java.util.Scanner;
+
+import com.biz.MemberBizImpl;
+
+public class MemberView {
+	static Scanner sc = new Scanner(System.in);
+	
+	
+	public static int getMenu() {
+		int select = 0;
+		System.out.println("***********");
+		System.out.println("1.전체출력");
+		System.out.println("2.선택출력");
+		System.out.println("3.추가");
+		System.out.println("4.수정");
+		System.out.println("5.삭제");
+		System.out.println("6.종료");
+		
+		return 0;
+	}
+	
+	
+	public static void main(String[] args) {
+		int select=0;
+		MemberBizImpl memberbiz = new MemberBizImpl(); 
+		
+		
+		while(select != 6) {
+		select = getMenu();
+			switch(select) {
+			case 1:
+				
+			case 2:
+				
+			case 3:
+				
+			case 4:
+				
+			case 5:
+				
+			case 6:
+			
+			
+			}
+			
+			
+			
+			
+			
+			
+		}
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

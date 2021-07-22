@@ -1,0 +1,43 @@
+package com.biz;
+
+import java.util.List;
+
+import com.dao.MemberDao;
+import com.dao.MemberDaoImpl;
+import com.dto.Member;
+
+public class MemberBizImpl implements MemberBiz {
+	
+	MemberDao memberdao = new MemberDaoImpl();
+	
+	@Override
+	public List<Member> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Member getOne(int n) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int insert(Member m) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int delete(int n) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int update(Member m) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

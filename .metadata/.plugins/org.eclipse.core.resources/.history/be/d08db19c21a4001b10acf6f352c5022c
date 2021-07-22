@@ -1,0 +1,37 @@
+package com.product.view;
+
+import java.util.Scanner;
+
+public class ProductView {
+	static Scanner sc = new Scanner(System.in);
+	
+	public static int getMenu() {
+		
+		System.out.println("*************");
+		System.out.println("1.전체 출력");
+		System.out.println("2.선택 출력");
+		System.out.println("3.제품 추가");
+		System.out.println("4.제품 수정");
+		System.out.println("5.제품 삭제");
+		System.out.println("6.종료");
+		System.out.println("*************");
+		System.out.print("메뉴선택: ");
+		int select =sc.nextInt();
+		
+		return select;
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		int select = 0;
+		ProductController pc = new ProductController();
+		
+	
+		
+		
+
+	}
+
+}

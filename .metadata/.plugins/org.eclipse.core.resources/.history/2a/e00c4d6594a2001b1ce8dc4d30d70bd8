@@ -1,0 +1,11 @@
+package com.test02.dao;
+
+public class MyTestDao {
+	
+	//select
+	public List<MyTest> getAll(Connection con) {
+		
+		
+		return null;
+	}
+}

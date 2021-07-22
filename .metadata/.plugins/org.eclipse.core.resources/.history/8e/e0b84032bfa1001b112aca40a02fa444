@@ -1,0 +1,16 @@
+package com.test01;
+
+import java.sql.SQLException;
+
+public class practiceM {
+
+	public static void main(String[] args) throws SQLException {
+		practicetemplate.con();
+		practicetemplate.st();
+		practicetemplate.rs1();
+		practicetemplate.resultsetclose();
+		practicetemplate.statementclose();
+		practicetemplate.Connectionclose();
+	}
+
+}

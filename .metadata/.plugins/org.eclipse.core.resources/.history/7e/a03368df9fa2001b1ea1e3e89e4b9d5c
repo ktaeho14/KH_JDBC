@@ -1,0 +1,22 @@
+package com.pr.dao;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.pr.dto.dto;
+
+import static common.JDBCTemplate.*;
+public class dao {
+	String stmt = null;
+	String rs = null;
+	public List<dto> selectAll(Connection con){
+			String sql = "SELECT * FROM MYTEST";
+			
+			List<dto> list = new ArrayList<dto>();
+			
+			stmt = con.createStatement();
+			
+		return null;
+	}
+}

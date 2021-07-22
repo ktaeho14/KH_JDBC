@@ -1,0 +1,83 @@
+package com.test02.view;
+
+import static common.JDBCTemplate.getConnection;
+
+import java.sql.Connection;
+import java.util.Scanner;
+
+import com.test02.dao.MyTestDao;
+public class MyTestView {
+	static Scanner sc = new Scanner(System.in);
+	
+	public static int getMenu() {
+		String str = null;
+		int select = 0;
+		
+		str = "1.전체출력\n";
+		str += "2.추가\n";
+		str += "3.수정\n";
+		str += "4.삭제\n";
+		str += "5.종료\n";
+		
+		System.out.println(str);
+		System.out.println("메뉴 선택");
+		select = sc.nextInt();
+		
+		return select;
+	}
+	
+	
+	
+	
+	public static void maim(String[] args) {
+		int no =0;
+		
+		int mno=0;
+		String name = null;
+		String nickName = null;
+		
+		MyTestDao dao = new MyTestDao();
+		
+		do {
+			
+			no=getMenu();
+			
+			switch(no) {
+			//전체 출력(selectAll)
+			case 1:
+				System.out.println("****전체출력****");
+				Connection con = getConnection();
+				
+				System.out.println(dao.getAll(con));
+				
+				con.close();
+				break;
+			//추가(insert)
+			case 2:
+				
+			//수정(update)
+			case 3:
+				
+			//삭제(delete)
+			case 4:
+				
+			//종료
+			case 5:
+				System.out.println("종료");
+			break;
+			}
+			
+		}while(no != 5);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}

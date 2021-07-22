@@ -1,0 +1,17 @@
+package com.view;
+
+import java.util.Scanner;
+
+public class MemberView {
+	static Scanner sc = new Scanner(System.in);
+	public static int getMenu() {
+		return 0;
+	}
+	public static void main(String[] args) {
+		
+
+		
+	
+	}
+
+}
